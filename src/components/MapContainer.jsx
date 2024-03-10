@@ -34,7 +34,7 @@ const MapContainerSection = () => {
   return (
     <MapContainer center={[-1.2900988923095413, 36.81743532365925]} zoom={4} scrollWheelZoom={false} style={{height:"600px"}}>
       <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">Hass Locations Developed in Collaboration with openstreetmap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       {locations.map((location) => (
@@ -44,7 +44,7 @@ const MapContainerSection = () => {
           </Popup>
         </Marker>
       ))}
-      {error && <div className="error">Error: {error.message}</div>} // Display error message, if any
+      {error && <div className="error">Error: {error.message}</div>} 
     </MapContainer>
   );
 };
