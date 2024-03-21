@@ -2,7 +2,9 @@ import { useState, useEffect } from 'react';
 import { firestore } from '../firebaseConfig';
 import { collection } from 'firebase/firestore';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css'; // Import Leaflet CSS
+import 'leaflet/dist/leaflet.css'; 
+import './Map.css'
+import Header from './Header'
 
 const MapContainerSection = () => {
   const [locations, setLocations] = useState([]);
@@ -32,7 +34,10 @@ const MapContainerSection = () => {
   }, []);
 
   return (
-    <MapContainer center={[-1.2900988923095413, 36.81743532365925]} zoom={4} scrollWheelZoom={false} style={{height:"600px"}}>
+    <>
+    <Header/>
+    <div>
+    <MapContainer className='Map'  center={[-1.2900988923095413, 36.81743532365925]} zoom={4} scrollWheelZoom={false} style={{height:"600px", marginTop:'20px', border:'2px', borderColor:'black', borderStyle:'solid', borderRadius:'15px'}}>
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">Hass Locations Developed in Collaboration with openstreetmap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -46,6 +51,8 @@ const MapContainerSection = () => {
       ))}
       {error && <div className="error">Error: {error.message}</div>} 
     </MapContainer>
+    </div>
+    </>
   );
 };
 

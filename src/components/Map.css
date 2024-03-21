@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+
+.Map{
+    border-style: dashed;
+    border: 10px;
+    border-radius: 15px;
+
+}
