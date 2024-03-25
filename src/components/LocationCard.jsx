@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles/locationCards.css'; // Assuming styles for location cards
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const LocationCard = ({ location }) => {
   const { name, country, locationType, id } = location;
@@ -11,7 +11,7 @@ const LocationCard = ({ location }) => {
   };
 
   return (
-    <div onClick={() => handleImageNavigation(id)}>
+    <Link to={`/locations/${location.id}/images`}>
       <div className="location-card">
         <h2>{name}</h2>
         <p>
@@ -21,7 +21,7 @@ const LocationCard = ({ location }) => {
           <b>Location Type:</b> {locationType}
         </p>
       </div>
-    </div>
+    </Link>
   );
 };
 

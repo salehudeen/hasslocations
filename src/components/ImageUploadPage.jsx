@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { collection, doc, getDoc, updateDoc } from 'firebase/firestore'; // Replace with your Firebase instance
-import { storage, ref, uploadBytes, getDownloadURL } from 'firebase/storage'; // Replace with your Firebase Storage instance
+import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'; // Replace with your Firebase Storage instance
+import { firestore, storage } from '../firebaseConfig'; // Assuming Firebase config import
 
 const ImageUploadPage = () => {
   const { locationId } = useParams(); // Get location ID from route param
