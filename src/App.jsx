@@ -19,7 +19,7 @@ function App() {
         <Route path="/" element={<MapContainer/>} />
         <Route path='/login' element={<Login/>} />
         <Route path="/locationsform" element={<LocationForm/>} />
-        <Route path='/locations/:id/images' element={<ImageUploadPage/>}/>
+        <Route path="/locations/:locationId/images" element={<ImageUploadPage />} />
       </Routes>
     </Router>
     
