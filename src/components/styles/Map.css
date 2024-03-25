@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+
+.Map{
+    border-style: dashed;
+    border: 10px;
+    border-radius: 15px;
+
+}
+
+.pop-up-section{
+  font-family: 'poppins';
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.pop-up-button{
+  font-family: 'poppins';
+  padding: 5px;
+  background-color: aliceblue;
+  border-radius: 15px;
+
+}
+.pop-up-button:hover{
+    color: white;
+    background-color: navy;
+    transition: 1.25s;
+}

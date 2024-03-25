@@ -39,13 +39,13 @@ const LeftPanel = () => {
     <List>
       {Object.keys(countries).map((country) => (
         <React.Fragment key={country}>
-          <ListItem button onClick={() => handleClick(country)}>
+          <ListItem  onClick={() => handleClick(country)}>
             <ListItemText primary={country} />
             {open[country] ? <ExpandLess /> : <ExpandMore />}
           </ListItem>
           <Collapse in={open[country]} timeout="auto" unmountOnExit>
             {countries[country].map((location) => (
-              <ListItem key={location.id} button dense>
+              <ListItem key={location.id}  dense>
                 <ListItemText primary={location.name} />
               </ListItem>
             ))}

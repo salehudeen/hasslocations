@@ -1,0 +1,29 @@
+.location-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+  }
+  
+  .location-card {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    width: 300px; /* Adjust width as needed */
+  }
+  
+  .location-card h2 {
+    margin-bottom: 10px;
+  }
+  
+  .location-card p {
+    margin-bottom: 5px;
+  }
+
+  .location-card:hover{
+    color: white;
+    background-color:navy;
+    box-shadow: burlywood;
+    
+  }

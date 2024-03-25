@@ -3,9 +3,19 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import Logo from '../assets/Hass-Logo.png'; // Replace with your logo image path
-import './Header.css'
+import './styles/Header.css'
+import { useNavigate } from 'react-router-dom';
+
+
+
 
 const Header = () => {
+
+  const navigate = useNavigate();
+
+const handlelogin = () => {
+  navigate('/login');
+}
     return (
       <AppBar className='headerBar' position="static">
         <Toolbar disableGutters variant="dense">
@@ -16,7 +26,7 @@ const Header = () => {
             Hass Locations 
           </Typography>
           <img src={Logo} alt="App Logo" width="50" height="50" />
-          <IconButton sx={{ ml: 'auto' }}>
+          <IconButton  onClick={handlelogin} sx={{ ml: 'auto' }}>
            <button className='loginButton'>login</button>
           </IconButton>
         </Toolbar>
