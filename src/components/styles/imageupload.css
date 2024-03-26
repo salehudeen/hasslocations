@@ -1,0 +1,15 @@
+.uploaded-image{
+    width: 400px;
+    height: 500px;
+    border-radius: 15px;
+    padding: 5px;
+    border-style: solid;
+    
+}
+.upload-image-title{
+    text-align: center;
+    font-family: 'Poppins';
+}
+.upload-image-button{
+    
+}
