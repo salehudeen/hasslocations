@@ -2,7 +2,9 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
-import { signInWithEmailAndPassword,createUserWithEmailAndPassword } from "firebase/auth";
+
+
+
 const firebaseConfig = {
   // ... your Firebase project configuration options
   apiKey: "AIzaSyBMTwJSmBBY5hIv9BQm30la97403ZI18vE",

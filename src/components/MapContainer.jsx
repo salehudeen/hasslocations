@@ -4,7 +4,7 @@ import { collection, getDocs } from 'firebase/firestore';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import './styles/Map.css'; // Assuming styles for the map
-import Header from './Header'; // Assuming a Header component
+
 
 const MapContainerSection = () => {
   const [locations, setLocations] = useState([]);
@@ -44,8 +44,6 @@ const MapContainerSection = () => {
 
   return (
     <>
-      <Header />
-
       <div>
         {isLoading && <p className="loading">Loading locations...</p>}
         {error && <div className="error">Error: {error.message}</div>}

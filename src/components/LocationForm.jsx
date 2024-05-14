@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { TextField, Button, Select, MenuItem, FormControl, InputLabel } from '@mui/material';
-import Header from './Header';
+
 import { addDoc, collection } from 'firebase/firestore';
 import { v4 as uuidv4 } from 'uuid'; // Import for UUID generation
 import { firestore, auth } from '../firebaseConfig'; // Assuming firebaseConfig exports firestore and auth
 import './styles/lform.css'; // Assuming lform.css styles your form
-
-// Assuming LocationList component displays locations
 import LocationList from './LocationList';
+
+
 
 const LocationForm = () => {
   const [name, setName] = useState('');
@@ -54,7 +54,7 @@ const LocationForm = () => {
 
   return (
     <>
-      <Header />
+    
 
       <form className="location-form" onSubmit={handleSubmit}>
         <TextField
@@ -112,7 +112,7 @@ const LocationForm = () => {
         </Button>
       </form>
 
-      <LocationList />
+     <LocationList/>
     </>
   );
 };

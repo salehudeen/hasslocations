@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 
 
-import LeftPanel from './components/LeftPanel';
+
 import MapContainer from './components/MapContainer';
 import LocationForm from './components/LocationForm';
 import Login from './components/Login';
-import ImageUploadPage from './components/ImageUploadPage';
+
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LocationDetail from './components/LocationDetail';
 
 function App() {
   
@@ -18,7 +19,7 @@ function App() {
         <Route path="/" element={<MapContainer/>} />
         <Route path='/login' element={<Login/>} />
         <Route path="/locationsform" element={<LocationForm/>} />
-        <Route path="/locations/:locationId/images" element={<ImageUploadPage />} />
+        <Route path="/locations/:id/images" element={<LocationDetail/>} />
       </Routes>
     </Router>
     
