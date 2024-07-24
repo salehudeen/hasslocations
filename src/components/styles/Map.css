@@ -5,9 +5,15 @@
     border-style: dashed;
     border: 10px;
     border-radius: 15px;
+    z-index: 1;
+}
+.Mapheader{
+  z-index:2
 
 }
-
+.drawer-z-index {
+  z-index: 1000 !important;
+}
 .pop-up-section{
   font-family: 'poppins';
   display: flex;
