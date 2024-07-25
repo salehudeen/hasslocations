@@ -9,6 +9,8 @@ import Login from './components/Login';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LocationDetail from './components/LocationDetail';
+import LocationsManager from './components/LocationsManager';
+import LocationImages from './components/LocationImages';
 
 function App() {
   
@@ -19,7 +21,8 @@ function App() {
         <Route path="/" element={<MapContainer/>} />
         <Route path='/login' element={<Login/>} />
         <Route path="/locationsform" element={<LocationForm/>} />
-        <Route path="/locations/:id/images" element={<LocationDetail/>} />
+        <Route path="/locationsmanager" element={<LocationsManager/>} />
+        <Route path="/locations/:id/images" element={<LocationImages />} />
       </Routes>
     </Router>
     

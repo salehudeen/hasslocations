@@ -16,7 +16,7 @@ const Login = () => {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       console.log('User logged in:', userCredential.user);
       // Redirect to location form page on successful login
-      navigate('/locationsform');
+      navigate('/locationsmanager');
     } catch (error) {
       console.error('Login error:', error);
       setError(error.message); // Set error message for display
